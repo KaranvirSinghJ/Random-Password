@@ -10,7 +10,7 @@
         /* Create two equal columns that floats next to each other */
         .column {float: left;width: 50%;padding: 10px;}
         /* Clear floats after the columns */
-        .row {display: grid; grid-auto-flow: column;gap: 5%;}
+        .row {display: grid; grid-auto-flow: column: 50%;}
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
             .column {width: 100%;}
@@ -18,12 +18,14 @@
         ul.no-bullets {list-style-type: none;margin: 0;padding: 0;}
     </style>
     <body>
-        <h1 style="text-align:center;">Generate Random Unique Password</h1>
+        <h1 style="text-align:center; color:blue; background-color: #aaa;">Generate Random Unique Password</h1>
         <br><br>
+        <div style="background-color: #9655;">
         <h2 style="text-align:center;">Requirements: </h2>
         <h3 style="text-align:center;">&#9632; Enter password length</h3>
         <h3 style="text-align:center;">&#9632; Enter One of the feilds</h3>
-        <div class="container" style="text-align:center;">
+        </div>
+        <div class="container" style="text-align:center; background-color: #bbb;">
             <div class="column" style="text-align:right;">
                 <label for="length">Password Length:</label><br>
                 <label for="symbol">Include Symbols:</label><br>
@@ -32,7 +34,7 @@
                 <label for="lcase">Include Lowercase:</label><br>
             </div>
             <div class="column" style="text-align:left;">
-                <input type="text" id="plength" name="plength"><br>
+                <input type="text" id="plength" name="plength" placeholder="Length of password"><br>
                 <input type="checkbox" id="symbol" name="symbol"><br>
                 <input type="checkbox" id="num" name="num"><br>
                 <input type="checkbox" id="ucase" name="ucase"><br>
@@ -40,7 +42,7 @@
             </div>
             <input type="submit" value="Submit" onclick="return generate();" /><br><br>
 
-            <input type="text" id="pass" name="pass" style="width:300px;font-size:14pt;">
+            <input type="text" id="pass" name="pass" style="width:300px;font-size:14pt;" placeholder="Your Password will be here">
         </div>
     </body>
 </html>
